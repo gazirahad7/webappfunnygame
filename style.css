@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  max-height: 100vh;
+  font-family: "Titillium Web", sans-serif;
+  padding-top: 20px;
+  background-color: #fff;
+}
+
+
+.head-icon i{
+  float: none;
+  transform: rotate(-50deg);
+  padding: 0;
+  margin: 0;
+  color: rgb(255, 255, 67);
+}
+.active-item {
+  border: 3px solid rgb(241, 146, 129);
+  transform: scale(1, 1.2);
+}
+
+.item-list .active-item {
+  background-color: rgb(174, 240, 174);
+}
+ol {
+  font-size: 18px;
+  color: #333;
+  font-weight: 400;
+}
+h1 {
+  color: rgb(243, 149, 132);
+}
+h2::after,
+h3::after {
+  content: "";
+  display: block;
+  height: 0.5rem;
+  width: 6.5rem;
+  background-color: rgb(250, 160, 144);
+  margin: 20px auto;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 4px 2px;
+}
+
+.item-list li {
+  margin: 0px 5px 20px;
+  padding: 8px 12px;
+  background-color: rgb(204, 255, 204);
+  border-radius: 5px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.use-btn,
+.submit-btn {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgba(250, 95, 137, 0.973);
+  outline: 0;
+  color: #fff;
+}
+.use-btn:hover,
+.submit-btn:hover {
+  background-color: rgba(202, 60, 98, 0.973);
+  color: #fff;
+}
+.use-btn:focus,
+.submit-btn:focus {
+  outline: 0;
+}
+input[type="text"],
+input[type="number"] {
+  width: 350px;
+}
+
+.error {
+  color: #fff;
+  border-radius: 6px;
+}
+
+.show-name li {
+  text-align: left;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 4px;
+  margin: 10px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  text-transform: capitalize;
+  width: 320px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.show-output {
+  margin-left: 20px;
+  padding: 5px 6px;
+  background: rgba(255, 59, 111, 0.973);
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 16px;
+}
+i {
+  float: right;
+  font-size: 25px;
+  color: rgb(247, 84, 55);
+}
+#list {
+  position: relative;
+}
+.delete {
+  margin: 0;
+  padding: 0;
+}
+i:focus {
+  outline: 0;
+}
+
+.star {
+  color: rgb(248, 55, 55);
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+li img {
+  float: right;
+  margin: 0;
+  padding: 0;
+  color: tomato;
+}
+
+footer {
+  background-color: rgba(230, 93, 59, 0.507);
+  font-size: 20px;
+  font-weight: 600;
+}
+footer li i {
+  color: rgb(235, 88, 62);
+  font-size: 35px;
+}
+
+.modal-body {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+input:focus,
+button:focus,
+i:focus {
+  outline-color: none !important;
+  outline: 0 !important;
+}
+
+/* SCROLL DOWN */
+
+.scroll-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-down span i {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+.scroll-down span {
+  position: relative;
+  -webkit-animation: 3s arrow infinite ease;
+  animation: 2s arrow infinite ease;
+  z-index: 100;
+  padding-bottom: 20px;
+  margin: 0;
+}
+@-webkit-keyframes arrow {
+  0% {
+    top: 10px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+@keyframes arrow {
+  0% {
+    top: 10px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 90%;
+  }
+  .item-list li {
+    margin: 0px 4px 15px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  input[type="text"],
+  input[type="number"] {
+    width: 280px;
+  }
+
+  .show-name li {
+    font-size: 14px;
+    color: #000;
+    padding: 10px 4px;
+    margin: 10px 0;
+    width: 250px;
+    font-weight: 400;
+  }
+  .item-list li {
+    margin: 0px 5px 14px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 300;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="An my first simple  web appliaction with JavaScript " />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+
+    <!-- Bootstrap CSS -->
+    
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+
+    <title>Gazi Rahad</title>
+    <link
+      rel="shortcut icon"
+      href="img/facebook-profile-icon-png-6.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1 class="text-center">Hi...<sup class="head-icon"><i class="fas fa-hand-spock"></i></sup>  Welcome ! play now and enjoy.</h1>
+
+      <div class="item-list">
+
+        <ol class="row " id="headItem" >
+                            <h2 class="text-center ">Choose Your Play Item</h2>
+
+          <div class="col-md-6">
+            <li data-value="1" class="update-item">
+              What a person you are?<i class="fas fa-user"> </i>
+            </li>
+            <li data-value="2" class="update-item">
+              Do you have any relationship???<i class="fas fa-heart"></i>
+            </li>
+            <li data-value="3" class="update-item">When you'll get married? <i class="fas fa-ring"></i></li>
+            <li data-value="4" class="update-item">
+              Who is your favorite female actress?<i class="fas fa-female"></i>
+            </li>
+            <li data-value="5" class="update-item">Who is your favorite male actor?<i class="fas fa-male"></i></li>
+          </div>
+          <div class="col-md-6 ">
+            <li data-value="6" class="update-item">
+              Who is your favorite Footballer?<i class="far fa-futbol"></i>
+            </li>
+            <li data-value="7" class="update-item">
+              PUBG! Winer winer chicken diner try it?<i
+                class="fas fa-drumstick-bite"
+              ></i>
+            </li>
+            <li data-value="8" class="update-item">You are virgin?<i class="fas fa-grin-squint"></i></li>
+            <li data-value="9" class="update-item">
+              Who is your favorite Cricketer?<img
+                src="img/cricket-bat.png"
+                alt=""
+              />
+            </li>
+            <li data-value="10" class="update-item">
+              Your future life partner name first letter is ?
+              <i class="fas fa-grin-hearts"></i>
+            </li>
+          </div>
+        </ol>
+        <div class="text-center">
+          <button
+            type="button"
+            class="btn use-btn mb-3"
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
+          >
+            How To Use This ?
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <form id="form">
+ 
+
+      <div class="form-group">
+        <label for="name">Enter your name ? <span class="star">*</span></label>
+
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          placeholder="Enter name please..."
+          class="myinput"
+        />
+      </div>
+      <h5 id="error" class="error text-center my-2 bg-danger"></h5>
+
+      <div class="text-center">
+        <button type="submit" value="Add name" class="btn my-3 submit-btn">
+          Submit
+        </button>
+      </div>
+    </form>
+    <div class="text-center">
+      <h3 class="text-center">Your Result Is Here !</h3>
+      <div class="scroll-down">
+        <span> <i class="far fa-hand-point-down"></i> </span>
+      </div>
+
+      <div class="text-center">
+        <ol id="list" class="show-name text-center"></ol>
+        <h5 id="noResult">No Result Found Now</h5>
+      </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="container-fluid text-center mb-0 my-5">
+      <p class="my-2 p-0">© Gazi Rahad 2020 All rights reserved.</p>
+
+      <!-- Social Networks -->
+      <ul class="list-inline">
+        <li class="list-inline-item mb-2 mb-sm-0">
+          <a
+            class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
+            href="https://www.facebook.com/gazi.rahad.5"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+
+        <li class="list-inline-item mb-2 mb-sm-0">
+          <a
+            class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
+            href="https://github.com/gazirahad7"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+
+        <li class="list-inline-item mb-2 mb-sm-0">
+          <a
+            class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
+            href="https://www.instagram.com/gazi.rahad.5/"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- ========== END FOOTER ========== -->
+
+    <div
+      id="exampleModalCenter"
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              Thank You !
+            </h5>
+            <button
+              type="button"
+              class="btn btn-xs btn-icon btn-soft-secondary"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <svg
+                aria-hidden="true"
+                width="10"
+                height="10"
+                viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 class="text-center">HOW TO USE THIS !</h5>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span
+                  >Step 1: Please enter choose item number and click
+                </span>
+              </li>
+              <li class="list-group-item">
+                Step 2: Please enter your or friend name.<i class="fas fa-list-ol"></i>
+              </li>
+              <li class="list-group-item">
+                Step 3: If you need to delete result click delete icon.<i class="fas fa-trash-alt"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
