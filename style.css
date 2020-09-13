@@ -16,8 +16,7 @@ body {
   background-color: #fff;
 }
 
-
-.head-icon i{
+.head-icon i {
   float: none;
   transform: rotate(-50deg);
   padding: 0;
@@ -120,8 +119,8 @@ i {
   font-size: 25px;
   color: rgb(247, 84, 55);
 }
-#list {
-  position: relative;
+#list ol {
+  cursor: pointer !important;
 }
 .delete {
   margin: 0;
@@ -215,6 +214,37 @@ i:focus {
   100% {
     top: 10px;
   }
+}
+
+/* top and buttom style */
+.topBtn {
+  display: none;
+  position: fixed;
+  bottom: 18%;
+  right: 16px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+.bottomBtn {
+  display: none;
+  position: fixed;
+  top: 10%;
+  right: 16px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+.delete {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 576px) {

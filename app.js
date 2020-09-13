@@ -5,47 +5,43 @@ const name = document.getElementById("name");
 const error = document.getElementById("error");
 const headItem = document.getElementById("headItem");
 const form = document.getElementById("form");
-
+const playing = document.getElementById("playing");
 
 let number = 0;
 
 headItem.addEventListener("click", (e) => {
-if(e.target.classList.contains('update-item')){
+  if (e.target.classList.contains("update-item")) {
+    playing.innerHTML = "You are playing: " + e.target.textContent;
     number = e.target.getAttribute("data-value");
 
     document.querySelectorAll(".update-item").forEach((el) => {
       el.classList.remove("active-item");
     });
     e.target.classList.add("active-item");
-}
+  }
 });
 
+let dataArray = [];
 
-let actressArray = [];
-
-const getRandomNumber = () => Math.floor(Math.random() * actressArray.length);
-
+const getRandomNumber = () => Math.floor(Math.random() * dataArray.length);
 
 for (let i = 1; i <= people; i++) {
-  document.getElementById("act_" + i).innerHTML =
-    actressArray[getRandomNumber()];
+  document.getElementById("act_" + i).innerHTML = dataArray[getRandomNumber()];
 }
-
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-
   switch (number) {
     case "1":
-      actressArray = ["Good", "Very Good", "bad", "Very bad", "Best", "Dumb"];
+      dataArray = ["Good", "Very Good", "bad", "Very bad", "Best", "Dumb"];
       break;
     case "2":
-      actressArray = ["Yes", "No", "yes"];
+      dataArray = ["Yes", "No", "yes"];
       break;
 
     case "3":
-      actressArray = [
+      dataArray = [
         "21 age",
         "22 age",
         "23 age",
@@ -66,7 +62,7 @@ form.addEventListener("submit", (e) => {
       break;
 
     case "4":
-      actressArray = [
+      dataArray = [
         "sunny",
         "Alia Bhatt",
         "Katrina kaiff",
@@ -81,7 +77,7 @@ form.addEventListener("submit", (e) => {
       break;
 
     case "5":
-      actressArray = [
+      dataArray = [
         "Shahrukh Khan",
         "Salman Khan",
         "Aamir khan",
@@ -99,7 +95,7 @@ form.addEventListener("submit", (e) => {
       ];
       break;
     case "6":
-      actressArray = [
+      dataArray = [
         "MESSI",
         "NEYMAR",
         "LEWANDOWSKI",
@@ -107,20 +103,20 @@ form.addEventListener("submit", (e) => {
         "MESSi",
         "C.Ronaldo",
         "Roberto Carlos",
-        "Ronaldinho"
+        "Ronaldinho",
       ];
       break;
 
     case "7":
-      actressArray = ["Chicken diner", "you are lost"];
+      dataArray = ["Chicken diner", "you are lost"];
       break;
 
     case "8":
-      actressArray = ["you are virgin", "you are not virgin"];
+      dataArray = ["you are virgin", "you are not virgin"];
       break;
 
     case "9":
-      actressArray = [
+      dataArray = [
         "Viral kokli",
         "Kane williamson",
         ,
@@ -138,60 +134,86 @@ form.addEventListener("submit", (e) => {
         "lasith malinga",
         "mahmudul",
         "AB de villiers",
-        "Mashrafe"
+        "Mashrafe",
       ];
       break;
 
     case "10":
-      actressArray = ["a", "d",'e','f','h','i','l','m','n','o','p','r','s','t','u','y','z','r','s'];
+      dataArray = [
+        "a",
+        "d",
+        "e",
+        "f",
+        "h",
+        "i",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "y",
+        "z",
+        "r",
+        "s",
+      ];
       break;
   }
 
-  const newPerson = people + 1;
-  
-  error.innerHTML = '';
-
-let errorText = '';
- 
+  // commit
+  const allLetter = /^[A-Za-z ]+$/;
 
   if (!number) {
-  
-    errorText = "Please select an item to play";
-  }
-  else if(name.value !== "" ) {
-  
+    error.innerHTML = "Please select an item to play";
+  } else if (!name.value) {
+    error.innerHTML = "Please enter your name";
+  } else if (!name.value.match(allLetter)) {
+    error.innerHTML = "Only letters are allowed";
+  } else {
     const li = `<li> ${
       name.value
     } <span id='act_'> </span> <span class='show-output  '>${
-      actressArray[getRandomNumber()]
-    } </span> <i class="far fa-trash-alt delete  age"></i></li>`;
+      dataArray[getRandomNumber()]
+    } </span> <i class="far fa-trash-alt delete"></i></li>`;
 
-    noResult.innerHTML = ''
-    list.insertAdjacentHTML("beforeend", li);
-
+    error.innerHTML = "";
+    noResult.innerHTML = "";
     name.value = "";
-  } else if(!errorText){
 
-     errorText = "Please enter your name";
-
+    list.insertAdjacentHTML("beforeend", li);
   }
-    error.innerHTML = errorText;
-
 });
-
 
 list.addEventListener("click", function (e) {
-  //console.log(this.contains(e.target))
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.remove();
-    //console.log(people,list)
-   if (!list.childElementCount) {
+    if (!list.childElementCount) {
       noResult.innerHTML = "No Result Found Now";
-    }else{
-      noResult.innerHTML = ""
     }
   }
-
-  this.style.cursor = "pointer";
 });
 
+//Top button
+document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

@@ -4,11 +4,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="An my first simple  web appliaction with JavaScript " />
+    <meta
+      name="description"
+      content="An my first simple  web appliaction with JavaScript "
+    />
     <meta http-equiv="X-UA-compatible" content="IE=edge" />
 
     <!-- Bootstrap CSS -->
-    
 
     <link
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600&display=swap"
@@ -38,12 +40,14 @@
   </head>
   <body>
     <div>
-      <h1 class="text-center">Hi...<sup class="head-icon"><i class="fas fa-hand-spock"></i></sup>  Welcome ! play now and enjoy.</h1>
+      <h1 class="text-center">
+        Hi...<sup class="head-icon"><i class="fas fa-hand-spock"></i></sup>
+        Welcome ! play now and enjoy.
+      </h1>
 
       <div class="item-list">
-
-        <ol class="row " id="headItem" >
-                            <h2 class="text-center ">Choose Your Play Item</h2>
+        <ol class="row" id="headItem">
+          <h2 class="text-center">Choose Your Play Item</h2>
 
           <div class="col-md-6">
             <li data-value="1" class="update-item">
@@ -52,13 +56,17 @@
             <li data-value="2" class="update-item">
               Do you have any relationship???<i class="fas fa-heart"></i>
             </li>
-            <li data-value="3" class="update-item">When you'll get married? <i class="fas fa-ring"></i></li>
+            <li data-value="3" class="update-item">
+              When you'll get married? <i class="fas fa-ring"></i>
+            </li>
             <li data-value="4" class="update-item">
               Who is your favorite female actress?<i class="fas fa-female"></i>
             </li>
-            <li data-value="5" class="update-item">Who is your favorite male actor?<i class="fas fa-male"></i></li>
+            <li data-value="5" class="update-item">
+              Who is your favorite male actor?<i class="fas fa-male"></i>
+            </li>
           </div>
-          <div class="col-md-6 ">
+          <div class="col-md-6">
             <li data-value="6" class="update-item">
               Who is your favorite Footballer?<i class="far fa-futbol"></i>
             </li>
@@ -67,7 +75,9 @@
                 class="fas fa-drumstick-bite"
               ></i>
             </li>
-            <li data-value="8" class="update-item">You are virgin?<i class="fas fa-grin-squint"></i></li>
+            <li data-value="8" class="update-item">
+              You are virgin?<i class="fas fa-grin-squint"></i>
+            </li>
             <li data-value="9" class="update-item">
               Who is your favorite Cricketer?<img
                 src="img/cricket-bat.png"
@@ -93,9 +103,9 @@
       </div>
     </div>
 
-    <form id="form">
- 
+    <p id="playing"></p>
 
+    <form id="form">
       <div class="form-group">
         <label for="name">Enter your name ? <span class="star">*</span></label>
 
@@ -162,6 +172,23 @@
       </ul>
     </footer>
     <!-- ========== END FOOTER ========== -->
+    <button
+      id="bottomBtn"
+      class="bottomBtn"
+      title="Go To Bottom"
+      onclick="bottomFunction()"
+    >
+      <i class="fas fa-arrow-circle-down"></i>
+    </button>
+
+    <button
+      id="topBtn"
+      class="topBtn"
+      title="Go To Top"
+      onclick="topFunction()"
+    >
+      <i class="fas fa-arrow-circle-up"></i>
+    </button>
 
     <div
       id="exampleModalCenter"
@@ -203,13 +230,18 @@
               <li class="list-group-item">
                 <span
                   >Step 1: Please enter choose item number and click
+                  <i class="far fa-hand-point-left"></i>
                 </span>
               </li>
               <li class="list-group-item">
-                Step 2: Please enter your or friend name.<i class="fas fa-list-ol"></i>
+                Step 2: Please enter your or friend name.<i
+                  class="fas fa-list-ol"
+                ></i>
               </li>
               <li class="list-group-item">
-                Step 3: If you need to delete result click delete icon.<i class="fas fa-trash-alt"></i>
+                Step 3: If you need to delete result click delete icon.<i
+                  class="fas fa-trash-alt"
+                ></i>
               </li>
             </ul>
           </div>
