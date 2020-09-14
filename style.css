@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 html {
-  overflow-x: hidden;
+ scroll-behavior: smooth;  
 }
 body {
   background-color: #fff;
@@ -21,7 +21,7 @@ body {
   transform: rotate(-50deg);
   padding: 0;
   margin: 0;
-  color: rgb(255, 255, 67);
+  color: rgb(245, 245, 9);
 }
 .active-item {
   border: 3px solid rgb(241, 146, 129);
@@ -217,34 +217,45 @@ i:focus {
 }
 
 /* top and buttom style */
-.topBtn {
-  display: none;
+
+.to-top {
+  background: white;
   position: fixed;
-  bottom: 18%;
-  right: 16px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background: none;
+  bottom: 16px;
+  right:32px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color:#1f1f1f;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
 }
 
-.bottomBtn {
-  display: none;
-  position: fixed;
-  top: 10%;
-  right: 16px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background: none;
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
 }
+
 
 .delete {
   cursor: pointer;
+}
+
+.playing{
+  font-size: 18px;
+  font-weight: 400;
+  background-color: rgb(247, 107, 82);
+  padding: 3px 6px;
+  color: #fff;
+  border-radius: 5px;
+
 }
 
 @media screen and (max-width: 576px) {
@@ -280,9 +291,14 @@ i:focus {
     margin: 0px 5px 14px;
     padding: 8px 8px;
     border-radius: 5px;
-    color: #333;
     font-size: 13px;
+    color: #000;
     font-weight: 300;
     cursor: pointer;
+  }
+  .playing{
+    font-size: 14px;
+    max-width: 100%;
+
   }
 }

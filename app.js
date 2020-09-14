@@ -9,6 +9,7 @@ const playing = document.getElementById("playing");
 
 let number = 0;
 
+
 headItem.addEventListener("click", (e) => {
   if (e.target.classList.contains("update-item")) {
     playing.innerHTML = "You are playing: " + e.target.textContent;
@@ -197,23 +198,13 @@ list.addEventListener("click", function (e) {
 });
 
 //Top button
-document.getElementById("topBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
+const toTop = document.querySelector(".to-top");
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    topBtn.style.display = "block";
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
   } else {
-    topBtn.style.display = "none";
+    toTop.classList.remove("active");
   }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+});
