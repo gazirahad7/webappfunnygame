@@ -3,6 +3,7 @@
 }
 html {
  scroll-behavior: smooth;  
+ overflow-x: hidden;
 }
 body {
   background-color: #fff;
@@ -37,7 +38,7 @@ ol {
   font-weight: 400;
 }
 h1 {
-  color: rgb(243, 149, 132);
+  color: rgb(211, 101, 81);
 }
 h2::after,
 h3::after {
@@ -45,10 +46,12 @@ h3::after {
   display: block;
   height: 0.5rem;
   width: 6.5rem;
-  background-color: rgb(250, 160, 144);
+  background-color: rgb(241, 115, 92);
   margin: 20px auto;
 }
-
+.error{
+  background-color: rgb(221, 72, 45);
+}
 label {
   font-size: 20px;
   font-weight: bold;
@@ -69,13 +72,13 @@ label {
 .submit-btn {
   font-size: 18px;
   font-weight: 600;
-  background-color: rgba(250, 95, 137, 0.973);
+  background-color: rgba(221, 19, 73, 0.822);
   outline: 0;
   color: #fff;
 }
 .use-btn:hover,
 .submit-btn:hover {
-  background-color: rgba(202, 60, 98, 0.973);
+  background-color: rgba(182, 37, 76, 0.973);
   color: #fff;
 }
 .use-btn:focus,
@@ -109,15 +112,15 @@ input[type="number"] {
 .show-output {
   margin-left: 20px;
   padding: 5px 6px;
-  background: rgba(255, 59, 111, 0.973);
+  background: rgba(224, 61, 104, 0.973);
   text-transform: capitalize;
-  color: #fff;
+  color: #eee;
   font-size: 16px;
 }
 i {
   float: right;
   font-size: 25px;
-  color: rgb(247, 84, 55);
+  color: rgba(214, 46, 16, 0.911);
 }
 #list ol {
   cursor: pointer !important;
@@ -251,10 +254,11 @@ i:focus {
 .playing{
   font-size: 18px;
   font-weight: 400;
-  background-color: rgb(247, 107, 82);
+  background-color: rgb(221, 72, 45);
   padding: 3px 6px;
   color: #fff;
   border-radius: 5px;
+
 
 }
 
